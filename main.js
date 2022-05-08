@@ -6,7 +6,6 @@ document.getElementById('btnSubmit').addEventListener("click",(event)=>{
     axios.post('https://link-server.vercel.app/api/v1/project', {link:valueLink})
     .then(function (response) {
       document.getElementById('link').value=''
-      console.log(response)
     })
     .catch(function (error) {
       console.log(error);
