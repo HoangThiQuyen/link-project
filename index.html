@@ -10,14 +10,22 @@
 </head>
 
 <body>
+  <div id="toast__current">
+    <p class="toast__content"> Cập nhật thành công!</p>
+  </div>
+  <div id="toast__current__error">
+    <p class="toast__content_error"> Vui lòng điền link!</p>
+  </div>
   <div class="container">
+    <div id="link__current">Link hiện tại: <span id="value_link"></span></div>
     <form action="" method="post" role="form" class="formLink">
       <div class="content">
         <!-- <label for="link" class="labelLink">Link</label> -->
         <input type='text' name='link' id='link' placeholder='Enter link at here' />
       </div>
     </form>
-    <button type="button" id="btnSubmit" class="btnSubmit">Save</button>
+    <button type="button" id="btnSubmit" class="btnSubmit">Submit</button>
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./main.js"></script>
