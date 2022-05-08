@@ -1,3 +1,16 @@
+
+
+const getCurrentLink =  ()=>{
+    axios.get('https://link-server.vercel.app/api/v1/project')
+    .then(function (response) {
+      document.getElementById('value_link').innerHTML = response.data.data.link;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+getCurrentLink()
+
 function launch_toast() {
   var x = document.getElementById("toast__current")
   x.classList.add('toast')
@@ -13,9 +26,6 @@ function launch_toast__error() {
   setTimeout(function(){ x.className = x.className.replace("toast_error", ""); }, 2000);
 }
 
-function add_class_hidden() {
- document.getElementById("link__current").style.visibility='inherit'
-}
 
 document.getElementById('btnSubmit').addEventListener("click",(event)=>{
   let valueLink = document.getElementById('link').value.trim();
@@ -25,8 +35,7 @@ document.getElementById('btnSubmit').addEventListener("click",(event)=>{
     .then(function (response) {
       document.getElementById('link').value=''
       launch_toast()
-      document.getElementById('value_link').innerHTML = valueLink;
-      add_class_hidden()
+      getCurrentLink()
     })
     .catch(function (error) {
       console.log(error);
