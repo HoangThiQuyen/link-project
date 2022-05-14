@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 300px);
   margin: 0 auto;
 }
 .inputFile-container {
@@ -18,4 +18,11 @@
 }
 .inputFile button:focus {
   box-shadow: none;
+}
+img {
+  width: 130px;
+}
+.btn.btn-secondary {
+  background-color: #ffb000;
+  border-color: #ffb000;
 }
