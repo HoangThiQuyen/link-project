@@ -1,0 +1,21 @@
+.inputFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+.inputFile-container {
+  width: 92%;
+}
+
+.inputFile input:focus {
+  box-shadow: none;
+}
+.inputFile input {
+  margin-bottom: 30px;
+  height: 50px;
+}
+.inputFile button:focus {
+  box-shadow: none;
+}
